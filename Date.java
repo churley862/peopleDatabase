@@ -7,12 +7,13 @@ public class Date
    public int year;
    public Date(String input)
    {
-      month = Integer.parseInt(input.substring(input.indexOf("/")));
+      month = Integer.parseInt(input.substring(0,input.indexOf("/")));
       input = input.substring(input.indexOf("/")+1);
-      day = Integer.parseInt(input.substring(input.indexOf("/")));
+      day = Integer.parseInt(input.substring(0,input.indexOf("/")));
       input = input.substring(input.indexOf("/")+1);
       year = Integer.parseInt(input);
    }
+
    public int compareTo(Date dateIn)
    {
       if (dateIn.year > year)
