@@ -1,4 +1,4 @@
-public class UnderGraduateStudents extends student
+public class UnderGraduateStudents extends Student
 {
    
 }

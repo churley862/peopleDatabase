@@ -1,4 +1,4 @@
-public class GraduateStudents extends student
+public class GraduateStudents extends Student
 {
    public char assistantshipType;
 }

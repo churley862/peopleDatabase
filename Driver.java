@@ -53,7 +53,7 @@ public class Driver
         String phoneNumber = undergradData[2];
         String emailAddress = undergradData[3];
         Date birthdate = new Date(undergradData[4]);
-        char status = (undergradData[5]).charAt[0]; 
+        char status = (undergradData[5]).charAt(0); 
     }
     public static void graduateStudent()
     {

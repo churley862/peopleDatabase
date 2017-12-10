@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -f *.class
+javac *.java && java -classpath . Driver infile.txt outfile.txt
+  
