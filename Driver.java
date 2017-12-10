@@ -11,7 +11,7 @@ public class Driver
 
         while (inputFile.hasNext())
         {
-            String command = (inputFile.next());
+            String command = (inputFile.nextLine());
             String [] inputData = parseInputLine(command);
             //String output;
             switch (command.charAt(0))
