@@ -12,7 +12,7 @@ public class Driver
         while (inputFile.hasNext())
         {
             String command = (inputFile.next());
-
+            String [] inputData = parseInputLine(command);
             //String output;
             switch (command.charAt(0))
             {
@@ -20,18 +20,19 @@ public class Driver
                    System.out.println(inputFile.nextLine());
                    break;
                 case 'u':
-                  undergraduateStudent(command);
+                  undergraduateStudent(inputData);
                   break;
                 case 'g':
-                  graduateStudent();
+                  graduateStudent(inputData);
                   break;
                 case 'f':
-                  faculty();
+                  faculty(inputData);
                   break;
                 case 's':
-                  staff();
+                  staff(inputData);
                   break;
                 default:
+                  System.out.println("invalid input");
                   break;
             }
         }
@@ -45,25 +46,29 @@ public class Driver
         FileOutputStream outputFile = new FileOutputStream(outFile);
         System.setOut(new PrintStream(outputFile));
     }
-    public static void undergraduateStudent(String command)
+    public static void undergraduateStudent(String [] input)
     {
-        String undergradData[] = parseInputLine(command);
-        String name = undergradData[0];
-        String address = undergradData[1];
-        String phoneNumber = undergradData[2];
-        String emailAddress = undergradData[3];
-        Date birthdate = new Date(undergradData[4]);
-        char status = (undergradData[5]).charAt(0); 
+        String name = input[0];
+        String address = input[1];
+        String phoneNumber = input[2];
+        String emailAddress = input[3];
+        Date birthdate = new Date(input[4]);
+        char status = (input[5]).charAt(0); 
     }
-    public static void graduateStudent()
+    public static void graduateStudent(String [] input)
     {
-        
+        String name = input[0];
+        String address = input[1];
+        String phoneNumber = input[2];
+        String emailAddress = input[3];
+        Date birthdate = new Date(input[4]);
+        char status = (input[5]).charAt(0);   
     }
-    public static void faculty()
+    public static void faculty(String [] input)
     {
     
     }
-    public static void staff()
+    public static void staff(String [] input)
     {
       
     }
