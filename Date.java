@@ -1,8 +1,18 @@
 public class Date
 {
+  
    public int day;
+   
    public int month; 
    public int year;
+   public Date(String input)
+   {
+      month = Integer.parseInt(input.substring(input.indexOf("/")));
+      input = input.substring(input.indexOf("/")+1);
+      day = Integer.parseInt(input.substring(input.indexOf("/")));
+      input = input.substring(input.indexOf("/")+1);
+      year = Integer.parseInt(input);
+   }
    public int compareTo(Date dateIn)
    {
       if (dateIn.year > year)

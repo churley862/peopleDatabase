@@ -11,16 +11,16 @@ public class Driver
 
         while (inputFile.hasNext())
         {
-            char command = (inputFile.next()).charAt(0);
+            String command = (inputFile.next());
 
             //String output;
-            switch (command)
+            switch (command.charAt(0))
             {
                 case '#':
                    System.out.println(inputFile.nextLine());
                    break;
                 case 'u':
-                  undergraduateStudent();
+                  undergraduateStudent(command);
                   break;
                 case 'g':
                   graduateStudent();
@@ -45,14 +45,19 @@ public class Driver
         FileOutputStream outputFile = new FileOutputStream(outFile);
         System.setOut(new PrintStream(outputFile));
     }
-    public static void undergraduateStudent()
+    public static void undergraduateStudent(String command)
     {
-      String name = inputFile.next();
-      String address = inputFile.next();
+        String undergradData[] = parseInputLine(command);
+        String name = undergradData[0];
+        String address = undergradData[1];
+        String phoneNumber = undergradData[2];
+        String emailAddress = undergradData[3];
+        Date birthdate = new Date(undergradData[4]);
+        char status = (undergradData[5]).charAt[0]; 
     }
     public static void graduateStudent()
     {
-    
+        
     }
     public static void faculty()
     {
@@ -62,16 +67,13 @@ public class Driver
     {
       
     }
-    public String[] getInputData()
+    public static String[] parseInputLine(String input)
     {
       int counter = 0;
-      String input;
       String nextField;
       String [] output = {};
-      while (inputFile.hasNext())
-      {
         
-         input  = inputFile.next();
+         
          while(input.indexOf("#") != -1)
          {
             output[counter] = input.substring(input.indexOf("#"));
@@ -79,7 +81,6 @@ public class Driver
             counter++;
          }
         
-      }
       return output;
     }
   }
