@@ -1,7 +1,14 @@
 public class Person 
 {
-   public String name;
-   public String address;
-   public String phoneNumber;
-   public String emailAddress; 
+   protected String name;
+   protected String address;
+   protected String phoneNumber;
+   protected String emailAddress;
+
+   public Person(String name, String address, String phoneNumber, String emailAddress) {
+     this.name = name;
+     this.address = address;
+     this.phoneNumber = phoneNumber;
+     this.emailAddress = emailAddress;
+   }
 }

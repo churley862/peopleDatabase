@@ -22,20 +22,16 @@ public class Driver
                 System.out.println(inputFile.nextLine());
                 break;
             case 'u':
-                people[population] = new UnderGraduateStudents(inputData);
-                population += 1;
+                people[population++] = UnderGraduateStudents.parse(inputData);
                 break;
             case 'g':
-                people[population++] = new GraduateStudents(inputData);
-                population += 1;
+                people[population++] = GraduateStudents.parse(inputData);
                 break;
             case 'f':
-                people[population++] = new Faculty(inputData);
-                population +=1;
+                people[population++] = Faculty.parse(inputData);
                 break;
             case 's':
-                people[population++] = new Staff(inputData);
-                population +=1;
+                people[population++] = Staff.parse(inputData);
                 break;
             default:
                 System.out.println("invalid input");
@@ -50,7 +46,7 @@ public class Driver
         File outFile = new File(args[1]);
         inputFile = new Scanner(inFile);
         FileOutputStream outputFile = new FileOutputStream(outFile);
-        //System.setOut(new PrintStream(outputFile));
+        System.setOut(new PrintStream(outputFile));
     }
 
     public static String[] parseInputLine(String input)
