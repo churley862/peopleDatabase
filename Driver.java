@@ -26,14 +26,16 @@ public class Driver
                 population += 1;
                 break;
             case 'g':
-                graduateStudent(inputData);
                 people[population++] = new GraduateStudents(inputData);
+                population += 1;
                 break;
             case 'f':
-                faculty(inputData);
+                people[population++] = new Faculty(inputData);
+                population +=1;
                 break;
             case 's':
-                staff(inputData);
+                people[population++] = new Staff(inputData);
+                population +=1;
                 break;
             default:
                 System.out.println("invalid input");
