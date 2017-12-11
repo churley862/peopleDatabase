@@ -31,7 +31,6 @@ public class Driver
                 break;
             case 'f':
                 people[population++] = new Faculty(inputData);
-                population +=1;
                 break;
             case 's':
                 people[population++] = new Staff(inputData);
@@ -50,7 +49,7 @@ public class Driver
         File outFile = new File(args[1]);
         inputFile = new Scanner(inFile);
         FileOutputStream outputFile = new FileOutputStream(outFile);
-        //System.setOut(new PrintStream(outputFile));
+        System.setOut(new PrintStream(outputFile));
     }
     public static void undergraduateStudent(String [] input)
     {

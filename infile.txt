@@ -1,4 +1,4 @@
 u#Collin Hurley#48536 Manhattan Cir#(734) 612-9833#collin.hurley@gmail.com#09/21/1997#j
 g#Patrick Hurley#48536 Manhattan Cir#09/30/1967#(734) 991-5093#phurley@gmail.com#m#r
-f#Dr. Professor# 1700 University Ave#Room 3506#100000.00#10/11/2000#Doctor#10:30 - 11:30 MWF
-s#finish me
+f#Dr. Professor# 1700 University Ave#(734) 867-5309#professor@kettering.edu#Room 3506#100000.00#10/11/2000#Doctor#10:30-11:30MWF
+s#Joe Guy#1234 main#bce#(123) 456-7890#joeguy@gmail.com#1234b#10000.00#11/21/2011#Theo Person
