@@ -7,7 +7,7 @@ public class Date
 
     public Date(String input)
     {
-        String parts = input.split("/");
+        String[] parts = input.split("/");
         month = Integer.parseInt(parts[0]);
         day = Integer.parseInt(parts[1]);
         year = Integer.parseInt(parts[2]);
