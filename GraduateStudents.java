@@ -45,10 +45,6 @@ public class GraduateStudents extends Student
         return null;
     }
 
-    public int compareByAddress(GraduateStudents other) {
-        return address.compareTo(other.address);
-    }
-
     public static GraduateStudents parse(String[] input) {
         String name = input[1];
         String address = input[2];

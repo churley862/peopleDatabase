@@ -15,4 +15,16 @@ public class Person
     public int compareByName(Person other) {
         return name.compareTo(other.name);
     }
+
+    public int compareBySalary(Person other) {
+        return 0;
+    }
+
+    public int compareByAddress(Person other) {
+        return address.compareTo(other.address);
+    }
+
+    public int compareByHireDate(Person other) {
+        return 0;
+    }
 }

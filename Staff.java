@@ -10,10 +10,6 @@ public class Staff extends Employee
         this.supervisorName = supervisorName;
     }
 
-    public int compareByHireDate(Staff other) {
-        return hireDate.compareTo(other.hireDate);
-    }
-
     public String toString() {
         return String.format(
                    "Faculty\n" +

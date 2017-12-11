@@ -15,10 +15,24 @@ public class Employee extends Person
         this.hireDate = hireDate;
     }
 
+    public int compareBySalary(Person other) {
+        if (other instanceof Employee) {
+            double otherSalary = ((Employee) other).salary;
+            if (salary < otherSalary) return -1;
+            if (salary > otherSalary) return 1;
+            return 0;
+        }
 
-    public int compareBySalary(Employee other) {
-        if (salary < other.salary) return -1;
-        if (salary > other.salary) return 1;
-        return 0;
+        return super.compareBySalary(other);
     }
+
+    public int compareByHireDate(Person other) {
+        if (other instanceof Employee) {
+            return hireDate.compareTo(((Employee)other).hireDate);
+        }
+
+        return super.compareByHireDate(other);
+    }
+
 }
+
