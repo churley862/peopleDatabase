@@ -1,4 +1,4 @@
 u#Collin Hurley#48536 Manhattan Cir#(734) 612-9833#collin.hurley@gmail.com#09/21/1997#j
 g#Patrick Hurley#48536 Manhattan Cir#09/30/1967#(734) 991-5093#phurley@gmail.com#m#r
-f#Dr. Professor# 1700 University Ave#Room 3506#100000.00#10/11/2000#Doctor#10:30 - 11:30 MWF
-s#finish me
+f#Dr. Professor#1700 University Ave#(555) 111-2222#professor@skool.edu#Room 3506#100000.00#10/11/2000#Doctor#10:30 - 11:30 MWF
+s#Worker Bee#1234 Anystreet#Cog#(313) 555-1212#work@machine.com#Basement Corner#35000.00#01/01/2000#Mr. Big

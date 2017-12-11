@@ -52,24 +52,9 @@ public class Driver
         FileOutputStream outputFile = new FileOutputStream(outFile);
         //System.setOut(new PrintStream(outputFile));
     }
-    public static void undergraduateStudent(String [] input)
-    {
-    }
-    public static void graduateStudent(String [] input)
-    {
-    }
-    public static void faculty(String [] input)
-    {
 
-    }
-    public static void staff(String [] input)
-    {
-
-    }
     public static String[] parseInputLine(String input)
     {
-        System.out.println("Parsing: " + input);
-
         int fieldCount = 1;
         for (int i=0; i < input.length(); i++)
         {
@@ -85,7 +70,6 @@ public class Driver
         while(input.indexOf("#") != -1)
         {
             output[counter] = input.substring(0,input.indexOf("#"));
-            System.out.println("FLD: " + output[counter]);
             input = input.substring(input.indexOf("#")+1);
             counter++;
         }
