@@ -16,6 +16,14 @@ public class Person
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
     }
+
+    public double getSalary() {
+      return 0;
+    }
+
+    public Date getHireDate() {
+      return new Date("01/01/0000");
+    }
 /*
 Algorithm for int compareByName(Person other)
 return name.compareTo(other.name)
@@ -39,8 +47,12 @@ Variable or Constant	Type	Purpose
 other	Person	The person to compare with the current one
 */
     public int compareBySalary(Person other) {
-        return 0;
+      double otherSalary = other.getSalary();
+      if (getSalary() < otherSalary) return -1;
+      if (getSalary() > otherSalary) return 1;
+      return 0;
     }
+
 /*
 Algorithm for int compareByAddress
 return address.compareTo(other.address)
@@ -65,6 +77,6 @@ Variable or Constant	Type	Purpose
 Other	Person	The other person to compare with
 */
     public int compareByHireDate(Person other) {
-        return 0;
+      return getHireDate().compareTo(other.getHireDate());
     }
 }

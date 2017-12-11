@@ -20,6 +20,14 @@ public class Employee extends Person
         this.hireDate = hireDate;
         this.title = title;
     }
+
+    public double getSalary() {
+      return this.salary;
+    }
+
+    public Date getHireDate() {
+      return this.hireDate;
+    }
 /*
 Algorithm for int compareBySalary(Person other)
 if (other instanceof Employee)
@@ -38,16 +46,7 @@ other	Person	The person to compare with the current one
 salary	double	the salary an employee is paid
 other.salary	double	the salary of another employee to compare with
 */
-    public int compareBySalary(Person other) {
-        if (other instanceof Employee) {
-            double otherSalary = ((Employee) other).salary;
-            if (salary < otherSalary) return -1;
-            if (salary > otherSalary) return 1;
-            return 0;
-        }
 
-        return super.compareBySalary(other);
-    }
 /*
 Algorithm for int compareByHireDate(Person other)
 if (other instanceof Employee)
@@ -61,13 +60,6 @@ other	Person	The person to compare with the current one
 hireDate	Date	the date at which an employee started working there
 other.hireDate	Date	the date at which the employee being compared to started working there
 */
-    public int compareByHireDate(Person other) {
-        if (other instanceof Employee) {
-            return hireDate.compareTo(((Employee)other).hireDate);
-        }
-
-        return super.compareByHireDate(other);
-    }
 
 }
 
