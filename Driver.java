@@ -14,7 +14,7 @@ public class Driver
         while (inputFile.hasNext())
         {
             String command = (inputFile.nextLine());
-            String [] inputData = parseInputLine(command);
+            String [] inputData = command.split("#");
             //String output;
             switch (command.charAt(0))
             {
@@ -49,29 +49,5 @@ public class Driver
         System.setOut(new PrintStream(outputFile));
     }
 
-    public static String[] parseInputLine(String input)
-    {
-        int fieldCount = 1;
-        for (int i=0; i < input.length(); i++)
-        {
-            if (input.charAt(i) == '#')
-            {
-                fieldCount++;
-            }
-        }
-
-        int counter = 0;
-        String [] output = new String[fieldCount];
-
-        while(input.indexOf("#") != -1)
-        {
-            output[counter] = input.substring(0,input.indexOf("#"));
-            input = input.substring(input.indexOf("#")+1);
-            counter++;
-        }
-        output[counter] = input;
-
-        return output;
-    }
 }
 

@@ -7,11 +7,10 @@ public class Date
 
     public Date(String input)
     {
-        month = Integer.parseInt(input.substring(0,input.indexOf("/")));
-        input = input.substring(input.indexOf("/")+1);
-        day = Integer.parseInt(input.substring(0,input.indexOf("/")));
-        input = input.substring(input.indexOf("/")+1);
-        year = Integer.parseInt(input);
+        String parts = input.split("/");
+        month = Integer.parseInt(parts[0]);
+        day = Integer.parseInt(parts[1]);
+        year = Integer.parseInt(parts[2]);
     }
 
     public String toString() {
