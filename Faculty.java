@@ -1,3 +1,8 @@
+/*
+  Collin Hurley
+  faculty class used to define what a faculty member is 
+  CS101
+*/
 public class Faculty extends Employee
 {
     String officeHours;
@@ -10,7 +15,22 @@ public class Faculty extends Employee
               salary, hireDate);
         this.officeHours = officeHours;
     }
+/*
 
+*/
+/*
+	Data table for String toString	
+Variable or Constant	Type	Purpose
+name	String	Store the value of the Faculty name
+address	String	Store the value of the Faculty Address
+phoneNumber	String	Store the value of the Faculty Phone Number
+emailAddress	String	Store the value of the Faculty Email Address
+office	String	Store the value of the Faculty office location
+salary	double	Store the value of the Faculty salary
+hireDate	Date	Store the value of the Facultys hire date
+title	String	Store the value of the Faculty title
+officeHours	String 	Stored value of the office hours a faculty has
+*/
     public String toString() {
         return String.format(
                    "Faculty\n" +
@@ -26,7 +46,22 @@ public class Faculty extends Employee
                    name, address, phoneNumber, emailAddress, office, salary,
                    hireDate.toString(), title, officeHours);
     }
+/*
 
+*/
+/*
+	Data Table for Faculty parse()	
+Variable or Constant	Type	Purpose
+name	String	Store the value of the Faculty name
+address	String	Store the value of the Faculty Address
+phoneNumber	String	Store the value of the Faculty Phone Number
+emailAddress	String	Store the value of the Faculty Email Address
+office	String	Store the value of the Faculty office location
+salary	double	Store the value of the Faculty salary
+hireDate	Date	Store the value of the Facultys hire date
+title	String	Store the value of the Faculty title
+officeHours	String 	Stored value of the office hours a faculty has
+*/
     public static Faculty parse(String[] input) {
         String name = input[1];
         String address = input[2];

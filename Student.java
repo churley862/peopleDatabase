@@ -1,3 +1,9 @@
+/*
+  Collin Hurley
+  Student class creation for ease of operations
+  CS101
+*/
+
 public class Student extends Person
 {
     protected Date birthDate;
