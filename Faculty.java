@@ -11,18 +11,35 @@ public class Faculty extends Employee
         this.officeHours = officeHours;
     }
 
+    public String toString() {
+        return String.format(
+                   "Faculty\n" +
+                   "\tname: %s\n" +
+                   "\taddress: %s\n" +
+                   "\tphone number: %s\n" +
+                   "\te-mail address: %s\n" +
+                   "\toffice: %s\n" +
+                   "\tsalary: $%02f\n" +
+                   "\thiring date: %s\n" +
+                   "\ttitle: %s\n" +
+                   "\toffice hourse: %s\n",
+                   name, address, phoneNumber, emailAddress, office, salary,
+                   hireDate.toString(), title, officeHours);
+    }
+
     public static Faculty parse(String[] input) {
-        return new Faculty(
-                   input[1],
-                   input[2],
-                   input[3],
-                   input[4],
-                   input[5],
-                   input[8],
-                   Double.parseDouble(input[6]),
-                   new Date(input[7]),
-                   input[9]
-               );
+        String name = input[1];
+        String address = input[2];
+        String phoneNumber = input[3];
+        String emailAddress = input[4];
+        String office = input[5];
+        String title = input[8];
+        double salary = Double.parseDouble(input[6]);
+        Date hireDate = new Date(input[7]);
+        String officeHours = input[9];
+
+        return new Faculty(name, address, phoneNumber, emailAddress, office,
+                           title, salary, hireDate, officeHours);
     }
 
 }

@@ -7,6 +7,48 @@ public class GraduateStudents extends Student
         this.assistantshipType = assistantshipType;
     }
 
+
+    public String toString() {
+        return String.format(
+                   "Graduate Student\n" +
+                   "\tname: %s\n" +
+                   "\taddress: %s\n" +
+                   "\tphone number: %s\n" +
+                   "\te-mail address: %s\n" +
+                   "\tbirth date: %s\n" +
+                   "\tstatus: %s\n" +
+                   "\tassistantship: %s\n",
+                   name, address, phoneNumber, emailAddress,
+                   birthDate.toString(), statusText(), assistantshipText());
+    }
+
+    public String statusText() {
+        switch (status) {
+        case 'm':
+            return "Master";
+
+        case 'd':
+            return "Doctoral";
+        }
+        return null;
+    }
+
+    public String assistantshipText() {
+        switch (assistantshipType) {
+        case 't':
+            return "Teaching";
+
+        case 'r':
+            return "Research";
+        }
+
+        return null;
+    }
+
+    public int compareByAddress(GraduateStudents other) {
+        return address.compareTo(other.address);
+    }
+
     public static GraduateStudents parse(String[] input) {
         String name = input[1];
         String address = input[2];
