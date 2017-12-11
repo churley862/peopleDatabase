@@ -12,13 +12,13 @@ public class Staff extends Employee
 
     public String toString() {
         return String.format(
-                   "Faculty\n" +
+                   "Staff\n" +
                    "\tname: %s\n" +
                    "\taddress: %s\n" +
                    "\tphone number: %s\n" +
                    "\te-mail address: %s\n" +
                    "\toffice: %s\n" +
-                   "\tsalary: $%02f\n" +
+                   "\tsalary: $%.02f\n" +
                    "\thiring date: %s\n" +
                    "\ttitle: %s\n" +
                    "\tsupervisor: %s\n",

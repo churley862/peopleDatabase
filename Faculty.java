@@ -19,7 +19,7 @@ public class Faculty extends Employee
                    "\tphone number: %s\n" +
                    "\te-mail address: %s\n" +
                    "\toffice: %s\n" +
-                   "\tsalary: $%02f\n" +
+                   "\tsalary: $%.02f\n" +
                    "\thiring date: %s\n" +
                    "\ttitle: %s\n" +
                    "\toffice hourse: %s\n",
